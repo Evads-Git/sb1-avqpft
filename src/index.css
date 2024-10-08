@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white font-roboto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bebas;
+}
+
+.netflix-btn {
+  @apply bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition-colors;
+}
+
+.netflix-input {
+  @apply bg-gray-800 text-white border border-gray-700 rounded py-2 px-3 w-full focus:outline-none focus:ring-2 focus:ring-red-500;
+}
+
+.netflix-card {
+  @apply bg-gray-900 rounded-lg shadow-lg overflow-hidden;
+}
+
+/* Add this new style for video aspect ratio */
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-w-16 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
